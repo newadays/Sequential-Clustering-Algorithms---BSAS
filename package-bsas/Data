@@ -1,0 +1,13 @@
+package bsas;
+
+//import java.util.ArrayList;
+
+public class Data {
+	protected int x;
+	protected int y;
+
+	public static Integer[] row = new Integer[]{6,19,15,11,18,9,19,18,5,4,7,21,1,1,0,5};
+	public static Integer[] col = new Integer[]{12,7,4,0,12,20,22,17,11,18,15,18,19,4,9,11};
+
+}
+
