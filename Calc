@@ -1,0 +1,48 @@
+package bsas;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.abs;
+
+public class Calc extends Data {
+	public loadData obj[]= new loadData[16];
+
+
+
+	//public double eucDist(){
+
+	public static void main(String[] args) {
+
+		loadData obj[]= new loadData[16];
+		Integer[] row = new Integer[]{6,19,15,11,18,9,19,18,5,4,7,21,1,1,0,5};
+		Integer[] col = new Integer[]{12,7,4,0,12,20,22,17,11,18,15,18,19,4,9,11};
+		int j=0;
+		int k=0;
+		//	Integer obj2[]= new Integer[16];
+		for(int i=0;i<16;i++)
+		{
+			obj[i]= new loadData(row[j],col[k]);
+			j++;k++;
+		}
+		double xSqr = 0;double ySqr = 0;
+		Double [] euclid = new Double [15];
+		//	Object eucdist[] = new Object[15];
+		for(int i=0;i<euclid.length;i++){
+			int xdiff = obj[i].getX()-obj[i+1].getX();
+			int ydiff = obj[i].getY()-obj[i+1].getY();
+			xSqr  = Math.pow(xdiff, 2);
+			ySqr  = Math.pow(ydiff, 2);
+			double dist = xSqr + ySqr;
+			euclid[i] = Math.sqrt(dist);
+		}
+
+		for(int i=0;i<obj.length;i++)
+		{
+			System.out.println(obj[i]);
+		}
+		for(int i=0;i<euclid.length;i++)
+		{
+			System.out.println(euclid[i]);
+		}
+
+	}
+}
+
