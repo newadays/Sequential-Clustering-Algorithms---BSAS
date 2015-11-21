@@ -1,0 +1,33 @@
+package bsas;
+
+public class loadData {
+	Integer x;
+	Integer y;
+	double dist;
+	public loadData(double d)
+	{
+     this.dist = d;
+	}
+	public loadData(Integer row, Integer col)
+	{
+		this.x=row;
+		this.y=col;
+	}
+    
+	public Integer getX()
+	{
+		return this.x;
+	}
+
+	public Integer getY()
+	{
+		return this.y;
+	}
+
+	public String toString()
+	{
+		return (this.x+" , "+this.y);
+
+	}
+	
+}
